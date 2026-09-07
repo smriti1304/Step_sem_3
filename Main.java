@@ -1,30 +1,23 @@
+class ExamHall {
+    String hallName;
+    int seatsFilled;
+}
+
 public class Main {
-
-    static int maxProfit(int[] prices) {
-
-        int minPrice = prices[0];
-        int maxProfit = 0;
-
-        for (int i = 1; i < prices.length; i++) {
-
-            if (prices[i] < minPrice) {
-                minPrice = prices[i];
-            }
-
-            int profit = prices[i] - minPrice;
-
-            if (profit > maxProfit) {
-                maxProfit = profit;
-            }
-        }
-
-        return maxProfit;
-    }
-
     public static void main(String[] args) {
 
-        int[] prices = {7, 1, 5, 3, 6, 4};
+        ExamHall hallA = new ExamHall();
+        ExamHall hallB = new ExamHall();
 
-        System.out.println(maxProfit(prices));
+        hallA.hallName = "Block-3 Hall A";
+        hallB.hallName = "Block-3 Hall B";
+
+        hallA.seatsFilled++;
+        hallA.seatsFilled++;
+        hallA.seatsFilled++;
+        hallA.seatsFilled++;
+
+        System.out.println(hallA.hallName + " seatsFilled: " + hallA.seatsFilled);
+        System.out.println(hallB.hallName + " seatsFilled: " + hallB.seatsFilled);
     }
 }
